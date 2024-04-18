@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta  charset="UTF-8">
+  <meta name="viewport" content=""width=device-width,
+  initial.scale="1.0">
+  <Title>Almacenamiento de Raccons</Title> 
+  <script> 
+  function guardarDato(){
+    var dato = document.getElementById("dato").value;
+    localStorage.setItem("datoGuardardo", dato);
+    alert("Dato guardado correcto Raccon");
+  }
+  function mostrarDato () {
+    var datoGuardado = localStorage.getItem("datoGuardado");
+    alert("ato guardado: "+datoGuardado);
+  }
+  </script>
+</head>
+<body>
+  <input type="text" id="dato" placeholder="Ingrese un dato Sr Raccon">
+  <button onclick="guardarDato()">Guardar Dato</button>
+  <button  onclick="mostrarDato()">Mostrar Dato Guardado</button>
+</body>
+</html>
